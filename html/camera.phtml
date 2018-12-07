@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<?php
+    session_start();
+    if (!isset($_SESSION['login']) || $_SESSION['login'] === "guest")
+        header('Location: ../index.phtml');
+?>
+<html>
+    <head>
+            <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
+            <link href="../css/camera.css" rel="stylesheet" type="text/css">
+            <link rel="stylesheet" type="text/css" href="../css/navigation.css">
+    </head>
+<body>
+    
+    <?php
+            include("../php/navigation.php");
+            navi("cam");
+    ?>
+
+<div class="container">
+    <div class="cam_">
+        <div class="cam">
+            <video autoplay="true" id="video"></video>
+            <canvas width="640" height="480" id="upload"></canvas>
+            <canvas width="640" height="480" id="dropcan"></canvas>
+        </div>
+        <button id="snap" onclick="snap();"><img src="../css/images/instagram-icono.webp"></button>
+    </div>
+    
+
+    
+    <div class="effects">
+        <p><input type="file" accept="image/*" name="image" id="file" style="display: none;"></p>
+        <p><label id="upl" for="file" style="cursor: pointer;">Upload Image</label></p>
+        <button onclick="effect(0);"><img src="../css/images/yellowgl.png"></button>
+        <button onclick="effect(1);"><img src="../css/images/ichigo.png"></button>
+        <button onclick="effect(2);"><img src="../css/images/strip.png" ></button>
+        <button onclick="effect(3);"><img src="../css/images/oculus.png" ></button><br/>
+        <button onclick="effect(4);"><img src="../css/images/music.png" ></button>
+        <button onclick="effect(5);"><img src="../css/images/ven.png" ></button>
+        <button onclick="effect(6);"><img src="../css/images/fairy.png" ></button>
+        <button onclick="effect(7);"><img src="../css/images/spidy.png" ></button><br/>
+        <button onclick="effect(8);"><img src="../css/images/bleach.png" ></button><br/>
+    </div>
+    <div class="preview">
+            <canvas width="640" height="480" id="canvas"></canvas>
+            <form method="post" name="form1" action="../php/save_image.php">
+                <input name="hidden_data" id='hidden_data' type="hidden"/>
+                <input type="text" name="caption" placeholder="Enter Image Caption" value=""/>
+                <input type="submit" value="SAVE"/> 
+            </form>
+    </div>
+
+    <div class="thumbs">
+        <h3>Your previously Edited Images</h3>
+        <?php
+            include("../php/thumbs.php");
+        ?>
+    </div>
+    
+
+</div>
+    <footer></footer>
+</body>
+    <script src="../javascript/opencamera.js"></script>
+</html>

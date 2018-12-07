@@ -1,0 +1,62 @@
+<?php
+    session_start();
+    if (isset($_SESSION['login']) && $_SESSION['login'] != "guest")
+        header('Location: html/home.phtml');
+    else
+        $_SESSION['login'] = "guest";
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewpoint" content="width=device_width, initial-scale=1.0"/>
+        <link href="css/index.css" rel="stylesheet" type="text/css">
+        <script src="javascript/index.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1 class="heading" onclick="ft_clear()">
+                <img onclick="clear()" src="css/images/head1.png" alt="CAMAGRU_">
+            </h1>
+            <button class="loginbtn" onclick="ft_login()">LOGIN</button>
+            <button class="signupbtn" onclick="ft_signup()">SIGNUP</button>
+            <a id="gue"  href="html/gallery.phtml"><button class="continue">Continue as GUEST</button></a>
+        </header>
+        <div id="login_div">
+            <div id="log">
+                <h3>LOGIN</h3>
+                <form name="login" action="php/login.php" onsubmit="validate()" method="POST">
+                    Username <br/> <input type="text" value="" name="userid" placeholder="Enter your username or email" required/><br/>
+                    Password <br/> <input type="password" value="" name="passwd" placeholder="Enter your password" required/><br/>
+                    <input type="submit" value="Login" name="login"> <br/>
+                    <a href="html/forgotpass.html">Forgot Password?</a>
+                </form>
+            </div>
+        </div>
+        <div id="signup_div">
+                <div id="log">
+                        <h3>SIGNUP</h3>
+                        <form name="signup" action="php/signup.php" onsubmit="validate()" method="POST">
+                            Fullname <br/> <input type="text" value="" name="fullname" placeholder="Enter your fullname" required/><br/>
+                            Username <br/> <input type="text" value="" name="userid" placeholder="Enter your username" required/><br/>
+                            Email <br/><input type="email" value="" name="email" placeholder="Enter you email address" required/><br/>
+                            Password <br/> <input type="password" value="" name="passwd" placeholder="Enter your password" required/><br/>
+                            Confirm Password <br/><input type="password" value="" name="cmpswd" placeholder="Confirm your password" required/><br/>
+                            <input type="submit" value="Signup" name="signup">
+                        </form>
+                    </div>
+        </div>
+        <div class="Welcome">
+        <h2>Welcome to CAMAGRU_</h2>
+        <p>Share your best moments with millions of friends</p>
+        <strong>Login or Signup now!.</strong>
+        </div>
+        <div id="block">
+            <img class="slide" src="css/images/kiki.png">
+            <img class="slide" src="css/images/snoop.png">
+            <img class="slide" src="css/images/gal.png">
+            <img class="slide" src="css/images/sr.png">
+        </div>
+        <footer>&copy; 2018 bsamson</footer>
+    </body>
+    <script src="javascript/slide.js"></script>
+</html>

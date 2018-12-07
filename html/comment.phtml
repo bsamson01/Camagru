@@ -1,0 +1,19 @@
+<html>
+    <?php
+        session_start();
+        if (!isset($_SESSION['login']) || $_SESSION['login'] === "guest")
+            header('Location: ../index.phtml');
+    ?>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/navigation.css">
+    </head>
+    <body>
+        <?php
+           
+        ?>
+        <div class="imag"></div>
+        <div class="comments"></div>
+        <div class="cmnt"></div>
+        <footer></footer>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+nav 
+{
+    display : grid;
+    width : 100vw;
+    grid-template-columns: 50vw 50vw;
+    grid-template-areas: "headi navi";
+}
+nav ul
+{
+    grid-area: navi;
+    overflow: hidden;
+    float : right;
+    width : 50vw;
+}
+nav ul li
+{
+    overflow: hidden;
+    background-color: rgb(94, 17, 94);
+    float : left;
+    width : auto;
+}
+nav ul li.active
+{
+    background : linear-gradient(rgb(50, 6, 95), rgb(94, 17, 94));
+}
+nav ul li a
+{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1vmin 1vmin;
+    text-decoration: none;
+    font-size: 2vmin;
+}
+
+nav #titl img
+{
+    width : 40vmin;
+    height : 10vmin;
+}
+nav #title
+{
+    grid-area : headi;
+}
+
+

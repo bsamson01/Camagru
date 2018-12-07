@@ -1,0 +1,61 @@
+*
+{
+    text-align : center;
+}
+figure
+{
+    display : grid;
+    grid-template-rows :"10% 80%";
+    grid-template-areas: 
+    "figcaption"
+    "images";
+    width : 60%;
+    text-align: center;
+    border : solid rgb(52, 15, 83) 5px;
+    border-radius : 10%;
+    box-shadow: 8px 8px 15px rgb(40, 23, 150);
+    background: linear-gradient(rgb(205, 196, 230), rgb(73, 4, 4));
+    float : left;
+}
+.images
+{
+    grid-area: images;
+    width : 70vmin;
+    height : 60vmin;
+    border-radius: 10%;
+}
+
+figcaption
+{
+    grid-area : figcaption;
+}
+
+figcaption h3
+{
+    background-color: red;
+}
+
+#comi
+{
+    width : 30%;
+    float : left;
+    background: rgb(53, 77, 95);
+    border-radius: 10px;
+}
+.comme
+{
+    background :linear-gradient(purple,steelblue);
+    width : 30%;
+    float : left;
+    color : rgb(223, 183, 183);
+    font-weight : bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius : 10px;
+    border : solid 3px blueviolet;
+    box-shadow : 9px 9px 14px cornflowerblue;
+}
+#tt
+{
+    width : 50%;
+    height : 60px;
+}

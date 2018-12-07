@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <?php
+    session_start();
+    if (!isset($_SESSION['login']) || $_SESSION['login'] === "guest")
+            header('Location: ../index.phtml');
+    ?>
+    
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/navigation.css">
+        <link rel="stylesheet" type="text/css" href="../css/settings.css">
+    </head>
+    <body>
+        <?php
+            include("../php/navigation.php");
+            navi("set");
+        ?>
+        <div class="container">
+        <h1 id="he">SETTINGS</h1>
+        <div id="del">
+        <h1>DO YOU WANT TO DELETE YOUR ACCOUNT?</h1> <a href="../php/delete_account.php"><button>DELETE ACCOUNT</button></a>
+        </div>
+        <div id="cha">
+            <form action="../php/notifications.php" method="POST">
+                <h1>DO YOU WANT TO TURN ON NOTIFICATIONS?</h1>
+                <input name="sub" type="text"  placeholder="type yes or no">
+                <input type="submit" value="Confirm configuration">
+            </form>
+        </div>
+        <div id="form">
+        <span>Update Information</span>
+            <form name="signup" action="../php/update_account.php" method="POST">
+                New Fullname : <input type="text" value="" name="fullname" placeholder="Enter your fullname" /><br/>
+                New Username : <input type="text" value="" name="userid" placeholder="Enter your username"/><br/>
+                New Email : <input type="email" value="" name="email" placeholder="Enter you email address"/><br/>
+                New Password : <input type="password" value="" name="nwpwd" placeholder="Enter your password"/><br/>
+                Confirm New Password : <input type="password" value="" name="cnpwd" placeholder="Confirm your password"/><br/>
+                Old Password : <input type="password" value="" name="oldpwd" placeholder="Confirm your password" required/><br/>
+                <input type="submit" value="UPDATE" name="signup">
+            </form>
+        </div>
+    </div>
+    </body>
+</html>

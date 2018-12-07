@@ -1,0 +1,32 @@
+
+figure
+{
+    display : grid;
+    grid-template-rows :"10% 80%";
+    grid-template-areas: 
+    "figcaption"
+    "images";
+    width : 400px;
+    text-align: center;
+    border : solid rgb(52, 15, 83) 5px;
+    border-radius : 10%;
+    box-shadow: 8px 8px 15px rgb(40, 23, 150);
+    background: linear-gradient(rgb(205, 196, 230), rgb(73, 4, 4));
+    float : left;
+}
+.images
+{
+    grid-area: images;
+    width : 98%;
+    border-radius: 10%;
+}
+
+figcaption
+{
+    grid-area : figcaption;
+}
+
+figcaption h3
+{
+    background-color: red;
+}

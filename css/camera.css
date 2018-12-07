@@ -1,0 +1,223 @@
+body
+{
+    z-index: 0;
+    background: url("http://www.host2post.com/images/SsIe66nRn4djfM~/1920x1200/download/full-size-more-best-3d-background-desktop-wallpapers.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cam_
+{
+    grid-area : cam_;
+}
+
+.effects
+{
+    grid-area : effects;
+    text-align: center;
+}
+
+.container
+{
+    display : grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 40vmin 40vmin 20vmin;
+    grid-template-areas:
+    "cam_ effects"
+    "prev thumbs"
+    "save save";
+}
+
+.thumbs
+{
+    border-radius: 2vmin;
+    grid-area: thumbs;
+    text-align : center;
+    overflow: scroll;
+    background: rgba(59, 11, 45, 0.5);
+}
+
+.thumbs figure
+{
+    border : solid 0.6vmin grey;
+    border-radius : 2vmin;
+} 
+
+/* camera elements */
+#video
+{
+    border-radius : 5vmin;
+    box-shadow: 3vmin 3vmin 5vmin purple;
+    border : solid 1.2vmin whitesmoke;
+    width : 40vmin;
+    height : 30vmin;
+    position : absolute;
+    z-index : -1;
+}
+
+#dropcan
+{
+    z-index: 2;
+    border-radius : 5vmin;
+    border : solid 1.2vmin whitesmoke;
+    position : absolute;
+    width : 40vmin;
+    height : 30vmin;
+}
+
+#upload
+{
+    z-index: 0;
+    border-radius : 5vmin;
+    border : solid 1.2vmin whitesmoke;
+    position : absolute;
+    width : 40vmin;
+    height : 30vmin;
+    visibility: visible;
+}
+
+
+
+#canvas
+{
+    border-radius : 5vmin;
+    box-shadow: 3vmin 3vmin 5vmin purple;
+    border : solid 1.2vmin purple;
+    width : 40vmin;
+    height : 30vmin;
+    /* visibility: hidden; */
+}
+.preview
+{
+    grid-area : prev;
+    text-align : center;
+    font-size : 4vmin;
+    width : 40vmin;
+    height : 30vmin;
+}
+
+.preview input
+{
+    width : 10vmin;
+    height : 3vmin;
+    border-radius: 1vmin;
+    background: linear-gradient(grey,black);
+    color : white;
+}
+
+#upl
+{
+    color : rgb(132, 0, 255);
+    font-size : 1.5vmin;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button
+{
+    width : 5vmin;
+    height : 5vmin;
+    background: rgba(0,0,0,0);
+    border: none;
+}
+
+button img
+{
+    width : 4vmin;
+    height : 4vmin;
+}
+
+#snap
+{
+    border: none;
+    background: rgba(0,0,0,0);
+    z-index : 5;
+    position : absolute;
+    height : 4vmin;
+    width : 4vmin;
+    margin-left: 18vmin;
+    margin-top: 25vmin;
+}
+#snap img
+{
+    border-radius : 50% solid yellow;
+    height : 4vmin;
+    width : 4vmin;
+}
+
+
+/*filters*/
+    .grayscale{
+    
+        -webkit-filter:grayscale(1);
+        -moz-filter:grayscale(1);
+        -o-filter:grayscale(1);
+        -ms-filter:grayscale(1);
+        filter:grayscale(1);
+    }
+    .sepia{
+        -webkit-filter:sepia(0.8);
+        -moz-filter:sepia(0.8);
+        -o-filter:sepia(0.8);
+        -ms-filter:sepia(0.8);
+        filter:sepia(0.8);
+    }
+    .blur{
+        -webkit-filter:blur(3px);
+        -moz-filter:blur(3px);
+        -o-filter:blur(3px);
+        -ms-filter:blur(3px);
+        filter:blur(3px);
+    }
+    .brightness{
+        -webkit-filter:brightness(0.3);
+        -moz-filter:brightness(0.3);
+        -o-filter:brightness(0.3);
+        -ms-filter:brightness(0.3);
+        filter:brightness(0.3);
+    }
+    .contrast{
+        -webkit-filter:contrast(0.5);
+        -moz-filter:contrast(0.5);
+        -o-filter:contrast(0.5);
+        -ms-filter:contrast(0.5);
+        filter:contrast(0.5);
+    }
+    .hue-rotate{
+        -webkit-filter:hue-rotate(90deg);
+        -moz-filter:hue-rotate(90deg);
+        -o-filter:hue-rotate(90deg);
+        -ms-filter:hue-rotate(90deg);
+        filter:hue-rotate(90deg);
+    }
+    .hue-rotate2
+    {
+        -webkit-filter:hue-rotate(180deg);
+        -moz-filter:hue-rotate(180deg);
+        -o-filter:hue-rotate(180deg);
+        -ms-filter:hue-rotate(180deg);
+        filter:hue-rotate(180deg);
+    }
+    .hue-rotate3{
+        -webkit-filter:hue-rotate(270deg);
+        -moz-filter:hue-rotate(270deg);
+        -o-filter:hue-rotate(270deg);
+        -ms-filter:hue-rotate(270deg);
+        filter:hue-rotate(270deg);
+    }
+    .saturate{
+        -webkit-filter:saturate(10);
+        -moz-filter:saturate(10);
+        -o-filter:saturate(10);
+        -ms-filter:saturate(10);
+        filter:saturate(10);
+    }
+    .invert{
+        -webkit-filter:invert(1);
+        -moz-filter:invert(1);
+        -o-filter: invert(1);
+        -ms-filter: invert(1);
+        filter: invert(1);
+    }
+    /*end of filters*/
+    
+

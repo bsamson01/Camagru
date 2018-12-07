@@ -1,0 +1,41 @@
+*
+{
+    text-align : center;
+}
+
+.container
+{
+    display : grid;
+    grid-template-columns: 40vw 40vw;
+    grid-template-rows: 7vmin 20vmin 70vmin;
+    grid-template-areas:
+    "he he"
+    "cha del"
+    "form form";
+}
+
+#he
+{
+    grid-area : he;
+}
+
+#cha
+{
+    grid-area : cha;
+}
+#del
+{
+    grid-area: del;
+    color : red;
+}
+
+#form
+{
+    grid-area: form;
+}
+
+span
+{
+    color : brown;
+}
+
